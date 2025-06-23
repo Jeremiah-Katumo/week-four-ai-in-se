@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Python School Login</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login-box">
+        <h2>Welcome to Python School</h2>
+        <p>Please log in to access your Python courses</p>
+        <input type="text" id="username" placeholder="Username" />
+        <br>
+        <input type="password" id="password" placeholder="Password" />
+        <br>
+        <button onclick="checkLogin()">Login</button>
+        <div id="message" class="message"></div>
+    </div>
+
+    <script>
+        function checkLogin() {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+            const msg = document.getElementById("message");
+
+            if (user === "student1" && pass === "python123") {
+                msg.style.color = "green";
+                msg.innerText = "Login successful! Welcome to your Python course.";
+            } else {
+                msg.style.color = "red";
+                msg.innerText = "Invalid credentials. Please try again.";
+            }
+        }
+    </script>
+</body>
+
+</html>
