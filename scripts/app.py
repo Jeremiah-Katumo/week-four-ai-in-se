@@ -19,11 +19,14 @@ st.write("Upload a CSV file with 30 feature values to classify. You can also upl
 # Optional image upload
 uploaded_image = st.file_uploader("Upload an optional image", type=["jpg", "png"])
 if uploaded_image:
-    st.image(uploaded_image, caption="Uploaded Image", use_column_width=True)
+    st.image(uploaded_image, caption="Uploaded Image", use_container_width=True)
 
 # Upload CSV file with features
 st.subheader("📄 Upload Feature CSV")
 uploaded_csv = st.file_uploader("Upload a CSV file with 30 feature columns", type=["csv"])
+
+# if uploaded_image:
+#     image = 
 
 if uploaded_csv:
     try:
@@ -35,8 +38,8 @@ if uploaded_csv:
         elif df.shape[0] == 0:
             st.error("⚠️ CSV has no rows of data.")
         else:
-            st.write("✅ CSV loaded:")
-            st.dataframe(df)
+            st.write("✅ CSV loaded:") # Prompt the success
+            st.dataframe(df) # Display the dataframe
 
             prediction = model.predict(df)[0]
             label = data.target_names[prediction]
