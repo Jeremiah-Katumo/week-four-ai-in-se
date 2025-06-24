@@ -9,7 +9,7 @@ chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("detach", True)
 
 driver = webdriver.Chrome(options=chrome_options)
-driver.get("http://localhost:8501")
+driver.get("http://localhost:8501") # The url for the running streamlit app
 
 # Wait for app to load for 5 seconds
 time.sleep(5)
