@@ -26,3 +26,25 @@ if __name__ == "__main__":
 # The sorted function is used to return a new list that is sorted based on the specified key
 # without modifying the original list.
 # The function is generic and can handle any list of dictionaries as long as the specified key exists.
+
+# Faith's part
+data = [
+    {'name': 'Alice', 'age': 30},
+    {'name': 'Bob', 'age': 25},
+    {'name': 'Carol', 'age': 27}
+]
+
+sorted_data = sort_dicts_by_key(data, 'age')
+print(sorted_data)
+# Output: [{'name': 'Bob', 'age': 25}, {'name': 'Carol', 'age': 27}, {'name': 'Alice', 'age': 30}]
+
+# Usage Example
+data = [
+    {'name': 'Alice', 'age': 30},
+    {'name': 'Bob', 'age': 25},
+    {'name': 'Carol', 'age': 27}
+]
+
+sorted_data = sort_dicts_by_key(data, 'age')
+print(sorted_data)
+# Output: [{'name': 'Bob', 'age': 25}, {'name': 'Carol', 'age': 27}, {'name': 'Alice', 'age': 30}]
